@@ -5,8 +5,8 @@ from Sheet import SheetIt
 import time
 
 
-#If you want to use this, you need to put your sheety api in the .env.test
-# https://docs.google.com/spreadsheets/u/1/d/1JruQ79Ha3BbFPuZJlgERxfpq5qr_pGUJI85-KqBDVXk/copy
+# If you want to use this, you need to put your sheety api in the .env.test
+# https://docs.google.com/spreadsheets/d/1V42UHx4cXx-WYrobiZdOmcX79f4r2fbEELFgtEDOwU8/copy
 # Use this link for the google sheet.
 
 try:
