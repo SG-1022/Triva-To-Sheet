@@ -32,7 +32,7 @@ class SheetIt:
                 "answer #3": unescape(answers[2]),
                 "answer #4": unescape(answers[3]),
                 "answer": unescape(self.data["correct_answer"]),
-                "#If you want to see the answer, triple click the cell": " ",
+                "|": "|",
 
             }
         }
