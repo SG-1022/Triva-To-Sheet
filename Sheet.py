@@ -32,6 +32,7 @@ class SheetIt:
                 "answer #3": unescape(answers[2]),
                 "answer #4": unescape(answers[3]),
                 "answer": unescape(self.data["correct_answer"]),
+                "#If you want to see the answer, triple click the cell": " ",
 
             }
         }
@@ -39,8 +40,7 @@ class SheetIt:
         response = requests.post(self.URL, json=payload)
 
         if response.status_code == 200 or response.status_code == 201:
-            print("Success! New row added to the Google Sheet.")
-            print("Response from Sheety:", response.json())
+            pass
         else:
             print(f"Failed with status code {response.status_code}")
             print(f"Error details: {response.text}")
