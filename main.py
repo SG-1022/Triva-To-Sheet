@@ -25,7 +25,7 @@ question_number = 1
 
 sheet = SheetIt()
 
-seconds = -3600 # Change to -1 to get fastest result with no wait.
+seconds = 3600 # Change to -1 to get fastest result with no wait.
 
 try:
     while True:
