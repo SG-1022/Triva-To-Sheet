@@ -7,18 +7,18 @@ from Sheet import SheetIt
 # BEFORE YOU RUN THIS, RUN main.py FOR SOME TIME,
 # AND TO BE QUICK, CHANGE seconds TO -1
 #
-#
-# To see the result, in the terminal, run
-# 'pip install -r requirements.txt'
-# if doesn't work, first run
-# 'python -m venv venv'
-#
 # after that, run
 # 'streamlit run demo.py'
 # and click this link, then you will be taken to the website
 # and the to close it,
 # click on the terminal,
 # then press Ctrl+C
+#
+# --DEBUG-- - ModuleNotFoundError
+# To see the result, in the terminal, run
+# 'pip install -r requirements.txt'
+# if doesn't work, first run
+# 'python -m venv venv'
 
 sheet = SheetIt()
 
