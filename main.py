@@ -25,7 +25,7 @@ question_number = 1
 
 sheet = SheetIt()
 
-seconds = -1 # Change to -1 to get fastest result with no wait.
+seconds = -3600 # Change to -1 to get fastest result with no wait.
 
 try:
     while True:
@@ -38,6 +38,7 @@ try:
             time.sleep(seconds)
 
         print(f"Question #{question_number} is done.")
+        question_number += 1
 
 except KeyboardInterrupt:
     print("Done")
