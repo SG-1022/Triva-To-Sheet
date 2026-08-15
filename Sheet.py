@@ -9,15 +9,14 @@ load_dotenv()
 
 class SheetIt:
 
-    def __init__(self, data, URL=os.environ.get("SheetyPOSTURL")):
+    def __init__(self, URL=os.environ.get("SheetyPOSTURL")):
         self.URL = URL
-        self.data = data
         print(os.environ.get("SheetyPOSTURL"))
 
-    def put_info_in_sheet(self):
+    def put_info_in_sheet(self, data=None):
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-        answers = [i for i in self.data["incorrect_answers"]] + [self.data["correct_answer"]]
+        answers = [i for i in data["incorrect_answers"]] + [data["correct_answer"]]
 
         random.shuffle(answers)
 
@@ -25,13 +24,13 @@ class SheetIt:
         payload = {
             "sheet1": {
                 "time": timestamp,
-                "category": unescape(self.data["category"]),
-                "question": unescape(self.data["question"]),
+                "category": unescape(data["category"]),
+                "question": unescape(data["question"]),
                 "answer #1": unescape(answers[0]),
                 "answer #2": unescape(answers[1]),
                 "answer #3": unescape(answers[2]),
                 "answer #4": unescape(answers[3]),
-                "answer": unescape(self.data["correct_answer"]),
+                "answer": unescape(data["correct_answer"]),
                 "|": "|",
 
             }
@@ -44,3 +43,20 @@ class SheetIt:
         else:
             print(f"Failed with status code {response.status_code}")
             print(f"Error details: {response.text}")
+
+    #Chatgpt
+    def get_random_question(self):
+        response = requests.get(self.URL)
+
+        if response.status_code == 200:
+            questions = response.json()["sheet1"]
+
+            if not questions:
+                return None
+
+            return random.choice(questions)
+
+        else:
+            print(f"Failed with status code {response.status_code}")
+            print(f"Error details: {response.text}")
+            return None
