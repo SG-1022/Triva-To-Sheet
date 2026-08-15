@@ -4,7 +4,7 @@ from Sheet import SheetIt
 
 # This is an example website to show questions as if a trivia.
 #
-# BEFORE YOU RUN THIS, RUN main.py FOR SOME TIME,
+# BEFORE YOU RUN THIS, RUN add_questions.py FOR SOME TIME,
 # AND TO BE QUICK, CHANGE seconds TO -1
 #
 # after that, run
@@ -14,11 +14,14 @@ from Sheet import SheetIt
 # click on the terminal,
 # then press Ctrl+C
 #
-# --DEBUG-- - ModuleNotFoundError
-# To see the result, in the terminal, run
+# --DEBUG-- - ModuleNotFoundError, ERRORS
+# Run
 # 'pip install -r requirements.txt'
 # if doesn't work, first run
 # 'python -m venv venv'
+# then try
+# 'pip install -r requirements.txt'
+# again
 
 sheet = SheetIt()
 
